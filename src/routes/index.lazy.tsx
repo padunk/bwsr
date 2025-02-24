@@ -26,7 +26,7 @@ function App() {
             engaging experience.
           </p>
         </section>
-        <section aria-label='Interactive Bubble Wrap' className='my-8'>
+        <section aria-label='Interactive Bubble Wrap'>
           <BubbleWrap />
         </section>
       </article>

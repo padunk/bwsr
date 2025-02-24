@@ -68,10 +68,10 @@ function BubbleWrap() {
           </Button>
         )}
       </div>
-      <div 
+      <div
         role='grid'
         aria-label='Bubble Wrap Grid'
-        className='flex w-full gap-0.5 flex-wrap items-center mx-auto pb-20 px-3 pt-3 shadow-xl rounded-md bg-neutral-950'
+        className='flex w-full gap-0.5 flex-wrap items-center mx-auto pb-20 pt-3 shadow-xl rounded-md bg-neutral-950'
       >
         {grids.map(({ id, clicked, src }, index: number) => {
           return (

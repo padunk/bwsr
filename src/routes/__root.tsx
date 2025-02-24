@@ -9,10 +9,10 @@ export const Route = createRootRoute({
       <>
         <header>
           <nav className='p-2 flex gap-2 absolute top-0 left-0 w-full border-b-2 border-white'>
-            <Link to='/' className='[&.active]:text-orange-500'>
+            <Link to='/' className='[&.active]:text-amber-500'>
               Home
             </Link>{' '}
-            <Link to='/about' className='[&.active]:text-orange-500'>
+            <Link to='/about' className='[&.active]:text-amber-500'>
               About
             </Link>
           </nav>
