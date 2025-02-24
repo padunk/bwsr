@@ -10,9 +10,9 @@
 
 import { createFileRoute } from '@tanstack/react-router'
 
-import { Route as rootRoute } from './routes/__root'
-
 // Import Routes
+
+import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 

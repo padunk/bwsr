@@ -10,13 +10,27 @@ export const Route = createLazyFileRoute('/')({
 
 function App() {
   return (
-    <>
-      <div className='my-8'>
-        <h1 className='text-xl text-amber-600 md:text-3xl lg:text-5xl'>BWSR</h1>
-        <p className='text-gray-400'>Bubble Wrap Stress Reducer</p>
-      </div>
-      <BubbleWrap />
-    </>
+    <main className='container mx-auto px-4'>
+      <article className='my-8'>
+        <section>
+          <h1 className='text-xl text-amber-600 md:text-3xl lg:text-5xl'>
+            BWSR
+          </h1>
+          <p className='text-gray-400'>Bubble Wrap Stress Reducer</p>
+        </section>
+        <section className='my-6'>
+          <p className='text-gray-300 max-w-2xl'>
+            Welcome to BWSR, your virtual bubble wrap popping experience.
+            Relieve stress and anxiety with the satisfying pop of digital bubble
+            wrap. Each bubble features unique sounds and visuals for a more
+            engaging experience.
+          </p>
+        </section>
+        <section aria-label='Interactive Bubble Wrap' className='my-8'>
+          <BubbleWrap />
+        </section>
+      </article>
+    </main>
   )
 }
 

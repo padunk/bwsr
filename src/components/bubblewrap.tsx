@@ -68,7 +68,11 @@ function BubbleWrap() {
           </Button>
         )}
       </div>
-      <div className='flex w-full gap-0.5 flex-wrap items-center mx-auto pb-20 px-3 pt-3 shadow-xl rounded-md bg-neutral-950'>
+      <div 
+        role='grid'
+        aria-label='Bubble Wrap Grid'
+        className='flex w-full gap-0.5 flex-wrap items-center mx-auto pb-20 px-3 pt-3 shadow-xl rounded-md bg-neutral-950'
+      >
         {grids.map(({ id, clicked, src }, index: number) => {
           return (
             <button
@@ -80,13 +84,16 @@ function BubbleWrap() {
                 !clicked && 'hover:scale-102 cursor-pointer',
                 index % 2 === 1 && 'translate-y-1/2'
               )}
-              role='button'
+              role='gridcell'
               onClick={() => handleClick(index)}
               type='button'
+              aria-pressed={clicked}
+              aria-label={`Bubble ${index + 1}${clicked ? ' (popped)' : ' (not popped)'}`}
             >
               <img
                 src={clicked ? bubleWrapDetail4 : src}
-                alt='bubble wrap detail'
+                alt={`Bubble wrap cell ${index + 1}${clicked ? ' (popped)' : ' (ready to pop)'}`}
+                loading='lazy'
               />
             </button>
           )
