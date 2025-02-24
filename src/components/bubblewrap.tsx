@@ -16,7 +16,7 @@ type Grid = {
   src: string
 }
 
-const initialGrid: Array<Grid> = Array.from({ length: 64 }, () => {
+const initialGrid: Array<Grid> = Array.from({ length: 70 }, () => {
   const id = crypto.randomUUID()
   return {
     id,
@@ -63,10 +63,12 @@ function BubbleWrap() {
     <>
       <div className='h-12 mb-6'>
         {grids.some((grid) => grid.clicked) && (
-          <Button onClick={handleReset}>Reset</Button>
+          <Button onClick={handleReset} type='button'>
+            Reset
+          </Button>
         )}
       </div>
-      <div className='flex w-full gap-0.5 flex-wrap items-center justify-center'>
+      <div className='flex w-full gap-0.5 flex-wrap items-center mx-auto pb-20 px-3 pt-3 shadow-xl rounded-md bg-neutral-950'>
         {grids.map(({ id, clicked, src }, index: number) => {
           return (
             <button
@@ -80,6 +82,7 @@ function BubbleWrap() {
               )}
               role='button'
               onClick={() => handleClick(index)}
+              type='button'
             >
               <img
                 src={clicked ? bubleWrapDetail4 : src}
@@ -89,9 +92,11 @@ function BubbleWrap() {
           )
         })}
       </div>
-      <div className='h-12 mt-20'>
+      <div className='h-12 my-6'>
         {grids.some((grid) => grid.clicked) && (
-          <Button onClick={handleReset}>Reset</Button>
+          <Button onClick={handleReset} type='button'>
+            Reset
+          </Button>
         )}
       </div>
     </>
