@@ -18,8 +18,8 @@ function App() {
           </h1>
           <p className='text-gray-400'>Bubble Wrap Stress Reducer</p>
         </section>
-        <section className='my-6'>
-          <p className='text-gray-300 max-w-2xl'>
+        <section className='my-6 flex items-center justify-center'>
+          <p className='text-gray-300 max-w-prose'>
             Welcome to BWSR, your virtual bubble wrap popping experience.
             Relieve stress and anxiety with the satisfying pop of digital bubble
             wrap. Each bubble features unique sounds and visuals for a more
